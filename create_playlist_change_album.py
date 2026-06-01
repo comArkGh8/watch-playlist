@@ -17,10 +17,10 @@ for _ ,file in enumerate(files):
         if artist:
             audiofile.tag.artist = artist
 
-        audiofile.tag.album = "my_album"
+        audiofile.tag.album = "yale-american_revolution"
         try:
             audiofile.tag.save()
         except NotImplementedError:
             audiofile.tag.clear()
-            audiofile.tag.album = "my_album"
+            audiofile.tag.album = "yale-american_revolution"
             audiofile.tag.save()
